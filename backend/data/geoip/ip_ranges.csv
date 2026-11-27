@@ -1,0 +1,5 @@
+﻿cidr,country,city,asn,org
+10.1.0.0/16,IN,Delhi,64512,SynthNet Residential IN
+10.2.0.0/16,US,Seattle,64513,SynthNet Residential US
+10.3.0.0/16,GB,London,64514,SynthNet Residential GB
+10.4.0.0/16,DE,Frankfurt,64601,SynthHost Hosting DE
