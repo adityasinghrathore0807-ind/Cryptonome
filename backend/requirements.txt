@@ -4,3 +4,4 @@ scikit-learn
 networkx
 joblib
 shap>=0.54.1
+streamlit>=1.30

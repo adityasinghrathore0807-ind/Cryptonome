@@ -1,0 +1,15 @@
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+
+# Generated datasets
+backend/data/*.csv
+
+# Trained model files
+backend/ml/models/saved/
+backend/ml/models/saved_synthetic/
+
+# Environment files
+.env
