@@ -1,0 +1,335 @@
+{
+  "nodes": [
+    {
+      "id": "w:W1",
+      "type": "wallet",
+      "label": "W1"
+    },
+    {
+      "id": "w:W2",
+      "type": "wallet",
+      "label": "W2"
+    },
+    {
+      "id": "t:a1",
+      "type": "tx",
+      "label": "a1",
+      "txid": "a1",
+      "amount_btc": 1.0,
+      "timestamp": "2026-03-01T10:00:00+00:00"
+    },
+    {
+      "id": "ip:10.1.0.5",
+      "type": "ip",
+      "label": "10.1.0.5",
+      "country": "IN",
+      "city": "Delhi",
+      "asn": 64512,
+      "org": "SynthNet Residential IN",
+      "is_hosting": false
+    },
+    {
+      "id": "asn:AS64512",
+      "type": "asn",
+      "label": "AS64512",
+      "org": "SynthNet Residential IN"
+    },
+    {
+      "id": "ip:10.2.0.9",
+      "type": "ip",
+      "label": "10.2.0.9",
+      "country": "US",
+      "city": "Seattle",
+      "asn": 64513,
+      "org": "SynthNet Residential US",
+      "is_hosting": false
+    },
+    {
+      "id": "asn:AS64513",
+      "type": "asn",
+      "label": "AS64513",
+      "org": "SynthNet Residential US"
+    },
+    {
+      "id": "w:W3",
+      "type": "wallet",
+      "label": "W3"
+    },
+    {
+      "id": "t:a2",
+      "type": "tx",
+      "label": "a2",
+      "txid": "a2",
+      "amount_btc": 0.5,
+      "timestamp": "2026-03-01T10:05:00+00:00"
+    },
+    {
+      "id": "w:W4",
+      "type": "wallet",
+      "label": "W4"
+    },
+    {
+      "id": "t:a3",
+      "type": "tx",
+      "label": "a3",
+      "txid": "a3",
+      "amount_btc": 0.5,
+      "timestamp": "2026-03-01T10:10:00+00:00"
+    },
+    {
+      "id": "ip:10.4.0.7",
+      "type": "ip",
+      "label": "10.4.0.7",
+      "country": "DE",
+      "city": "Frankfurt",
+      "asn": 64601,
+      "org": "SynthHost Hosting DE",
+      "is_hosting": true
+    },
+    {
+      "id": "asn:AS64601",
+      "type": "asn",
+      "label": "AS64601",
+      "org": "SynthHost Hosting DE"
+    },
+    {
+      "id": "w:W5",
+      "type": "wallet",
+      "label": "W5"
+    },
+    {
+      "id": "t:a4",
+      "type": "tx",
+      "label": "a4",
+      "txid": "a4",
+      "amount_btc": 0.9,
+      "timestamp": "2026-03-02T09:00:00+00:00"
+    },
+    {
+      "id": "ip:10.2.0.1",
+      "type": "ip",
+      "label": "10.2.0.1",
+      "country": "US",
+      "city": "Seattle",
+      "asn": 64513,
+      "org": "SynthNet Residential US",
+      "is_hosting": false
+    },
+    {
+      "id": "ip:10.3.0.2",
+      "type": "ip",
+      "label": "10.3.0.2",
+      "country": "GB",
+      "city": "London",
+      "asn": 64514,
+      "org": "SynthNet Residential GB",
+      "is_hosting": false
+    },
+    {
+      "id": "asn:AS64514",
+      "type": "asn",
+      "label": "AS64514",
+      "org": "SynthNet Residential GB"
+    },
+    {
+      "id": "w:W6",
+      "type": "wallet",
+      "label": "W6"
+    },
+    {
+      "id": "t:a5",
+      "type": "tx",
+      "label": "a5",
+      "txid": "a5",
+      "amount_btc": 0.89,
+      "timestamp": "2026-03-02T09:30:00+00:00"
+    },
+    {
+      "id": "ip:10.3.0.3",
+      "type": "ip",
+      "label": "10.3.0.3",
+      "country": "GB",
+      "city": "London",
+      "asn": 64514,
+      "org": "SynthNet Residential GB",
+      "is_hosting": false
+    }
+  ],
+  "edges": [
+    {
+      "source": "w:W1",
+      "target": "t:a1",
+      "type": "SENT",
+      "amount_btc": 1.0
+    },
+    {
+      "source": "w:W1",
+      "target": "ip:10.1.0.5",
+      "type": "USED_IP",
+      "count": 2
+    },
+    {
+      "source": "w:W1",
+      "target": "t:a2",
+      "type": "SENT",
+      "amount_btc": 0.5
+    },
+    {
+      "source": "w:W1",
+      "target": "t:a3",
+      "type": "SENT",
+      "amount_btc": 0.5
+    },
+    {
+      "source": "w:W1",
+      "target": "ip:10.4.0.7",
+      "type": "USED_IP",
+      "count": 1
+    },
+    {
+      "source": "w:W2",
+      "target": "t:a4",
+      "type": "SENT",
+      "amount_btc": 0.9
+    },
+    {
+      "source": "w:W2",
+      "target": "ip:10.2.0.1",
+      "type": "USED_IP",
+      "count": 1
+    },
+    {
+      "source": "t:a1",
+      "target": "w:W2",
+      "type": "RECEIVED_BY",
+      "amount_btc": 1.0
+    },
+    {
+      "source": "t:a1",
+      "target": "ip:10.1.0.5",
+      "type": "ORIGIN_IP",
+      "port": 40000
+    },
+    {
+      "source": "t:a1",
+      "target": "ip:10.2.0.9",
+      "type": "DEST_IP",
+      "port": 8333
+    },
+    {
+      "source": "ip:10.1.0.5",
+      "target": "asn:AS64512",
+      "type": "IN_ASN"
+    },
+    {
+      "source": "ip:10.2.0.9",
+      "target": "asn:AS64513",
+      "type": "IN_ASN"
+    },
+    {
+      "source": "t:a2",
+      "target": "w:W3",
+      "type": "RECEIVED_BY",
+      "amount_btc": 0.5
+    },
+    {
+      "source": "t:a2",
+      "target": "ip:10.1.0.5",
+      "type": "ORIGIN_IP",
+      "port": 40001
+    },
+    {
+      "source": "t:a2",
+      "target": "ip:10.2.0.9",
+      "type": "DEST_IP",
+      "port": 8333
+    },
+    {
+      "source": "t:a3",
+      "target": "w:W4",
+      "type": "RECEIVED_BY",
+      "amount_btc": 0.5
+    },
+    {
+      "source": "t:a3",
+      "target": "ip:10.4.0.7",
+      "type": "ORIGIN_IP",
+      "port": 40002
+    },
+    {
+      "source": "t:a3",
+      "target": "ip:10.2.0.9",
+      "type": "DEST_IP",
+      "port": 9050
+    },
+    {
+      "source": "ip:10.4.0.7",
+      "target": "asn:AS64601",
+      "type": "IN_ASN"
+    },
+    {
+      "source": "w:W5",
+      "target": "t:a5",
+      "type": "SENT",
+      "amount_btc": 0.89
+    },
+    {
+      "source": "w:W5",
+      "target": "ip:10.3.0.3",
+      "type": "USED_IP",
+      "count": 1
+    },
+    {
+      "source": "t:a4",
+      "target": "w:W5",
+      "type": "RECEIVED_BY",
+      "amount_btc": 0.9
+    },
+    {
+      "source": "t:a4",
+      "target": "ip:10.2.0.1",
+      "type": "ORIGIN_IP",
+      "port": 40003
+    },
+    {
+      "source": "t:a4",
+      "target": "ip:10.3.0.2",
+      "type": "DEST_IP",
+      "port": 8333
+    },
+    {
+      "source": "ip:10.2.0.1",
+      "target": "asn:AS64513",
+      "type": "IN_ASN"
+    },
+    {
+      "source": "ip:10.3.0.2",
+      "target": "asn:AS64514",
+      "type": "IN_ASN"
+    },
+    {
+      "source": "t:a5",
+      "target": "w:W6",
+      "type": "RECEIVED_BY",
+      "amount_btc": 0.89
+    },
+    {
+      "source": "t:a5",
+      "target": "ip:10.3.0.3",
+      "type": "ORIGIN_IP",
+      "port": 40004
+    },
+    {
+      "source": "t:a5",
+      "target": "ip:10.3.0.2",
+      "type": "DEST_IP",
+      "port": 8333
+    },
+    {
+      "source": "ip:10.3.0.3",
+      "target": "asn:AS64514",
+      "type": "IN_ASN"
+    }
+  ],
+  "truncated": false
+}
